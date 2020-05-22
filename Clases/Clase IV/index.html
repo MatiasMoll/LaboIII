@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+  <head>
+    <title>index</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type = "text/javascript">
+
+    window.onload = function(){
+        var btn = document.getElementById("btnEnviar");
+        btn.onclick = function(){
+            alert("Alerta del click del boton");
+            var inputName = document.getElementById("txtUser").value;
+            var inputPass = document.getElementById("txtPass").value;
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function(){
+                
+                if(http.readyState === 4){
+                    
+                    if(http.status === 200){
+                        
+                        if(http.responseText === "true"){
+                            alert("Usted se ha logeado");
+                        }else{
+                            alert("Combinacion Incorrecta");
+                        }
+                    }else{
+                        alert("Algo salio mal");
+                    }
+                }
+            }
+            http.open("GET","http://localhost:3000/loginUsuario?usr="+inputName+"&pass="+inputPass,true);
+            http.send();
+        }
+    }
+   </script>
+  </head>
+  <body>
+        <label>Usuario:</label><br>
+        <input type="text" id="txtUser" placeholder="Ingrese su usuario..."><br>
+        <label>Password:</label><br>
+        <input type="password" id="txtPass" placeholder="Ingrese su contraseña..."><br>
+        <input type="button" id="btnEnviar" value="Enviar">
+  </body>

@@ -1,0 +1,26 @@
+#cabeceraTabla{
+    text-align: center;
+    background-color: lightblue;
+    border:"solid";
+
+}
+#tablaDatos{
+    border-collapse: collapse;
+    width: 100%;
+}
+#ctnAgregar{
+    background-color: rgb(66, 144, 158);
+    width: 50%;
+    
+}
+#inputsAgregar{
+    margin:5%;
+    
+}
+#btnAgregoDiv{
+    margin: 15px;
+    padding:20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color:goldenrod;
+}

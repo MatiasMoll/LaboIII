@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="/funciones.js"></script>
+    <link type="text/css" href="./style.css" rel="stylesheet"/>
+</head>
+<body>
+    <input type="button" value="Abrir Formulario de Adeshion"
+        class="button" onclick="AbrirFormulario"
+        id = "botonAbrir"/>
+    <div class="container" id="contenedor" hidden="true">
+        <label>Nombre: </label>
+        <input type="Text" placeholder="Ingrese su nombre..." id="txtNombre"/><br>
+        <label>Apellido: </label>
+        <input type="Text" placeholder="Ingrese su apellido..." id="txtApellido"/><br>
+        <label>Fecha de Nacimiento: </label>
+        <input type="date" id="txtNacimiento"/><br>
+        <label>Numero de Telefono: </label>
+        <input type="number" placeholder="Ingrese su numero telefonico..." id="txtTelefono"/><br>
+        <input type="button" value="Cerrar" id="btnCerrar">
+        <input type="button" value="Agregar" id="btnAgregar"/>
+    </div>
+    <table id="tablaDatos" border="1">
+        <thead>
+            <tr id="cabeceraTabla">
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha Nacimiento</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo"> 
+
+        </tbody>
+    </table>
+</body>
+</html>
